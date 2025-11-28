@@ -34,8 +34,9 @@ for ($x=0; $x<count($jenis_pakaian); $x++) {
 	if ($jenis_pakaian[$x] != "") {
 		mysqli_query($koneksi, "insert into pakaian values('','$id_terakhir','$jenis_pakaian[$x]','$jumlah_pakaian[$x]')");
 
+
 	}
 }
 
-header("location:transaksi.php");
+echo "<script>alert('Data Tersimpan'); window.location.href='transaksi.php'</script>";
 ?>
